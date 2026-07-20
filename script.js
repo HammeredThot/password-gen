@@ -26,3 +26,6 @@ copyBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(passwordDisplay.textContent);
     alert("Password copied!");
 });
+
+// staged mistake
+// bad feature
