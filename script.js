@@ -1,6 +1,12 @@
 const passwordDisplay = document.getElementById("password");
 const generateBtn = document.getElementById("generateBtn");
 const copyBtn = document.getElementById("copyBtn");
+const lengthSlider = document.getElementById("length");
+const lengthValue = document.getElementById("lengthValue");
+
+lengthSlider.addEventListener("input", () => {
+    lengthValue.textContent = lengthSlider.value;
+});
 
 const characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -8,7 +14,7 @@ const characters =
 generateBtn.addEventListener("click", () => {
     let password = "";
 
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < lengthSlider.value; i++) {
         const randomIndex = Math.floor(Math.random() * characters.length);
         password += characters[randomIndex];
     }
