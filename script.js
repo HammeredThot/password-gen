@@ -26,3 +26,5 @@ copyBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(passwordDisplay.textContent);
     alert("Password copied!");
 });
+
+// password visibility toggle feature
